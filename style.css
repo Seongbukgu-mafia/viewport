@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #333;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#start-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://img.goodfon.com/wallpaper/nbig/e/11/jamie-vardy-leicester-city.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.start-wrap {
+  text-align: center;
+  padding: 40px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.start-wrap h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 8px #000;
+}
+
+#start-button {
+  font-size: 20px;
+  padding: 15px 30px;
+  background-color: #ffffffcc;
+  color: #0056b3;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+#start-button:hover {
+  background-color: #eeeeee;
+}
+
+.help-text {
+  font-size: 14px;
+  color: #555;
+  background: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #007bff;
+  border-radius: 6px;
+}
+
+#start-screen .help-text {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-left: 4px solid #ffffff;
+}
+
+.sidebar {
+  width: 220px;
+  background: #ffffff;
+  color: #0056b3;
+  height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.player-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.player-list li {
+  border-bottom: 1px solid #ccc;
+  padding: 6px 0;
+}
+
+.main-game {
+  display: none;
+  height: 100vh;
+  display: flex;
+}
+
+.game-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px;
+  background-image: url('https://img.goodfon.com/wallpaper/nbig/6/ac/leicester-city-fc-players.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-y: auto;
+}
+
+.content-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-wrap {
+  margin-bottom: 20px;
+}
+
+#guess-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+#submit-button,
+#reset-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#submit-button:hover,
+#reset-button:hover {
+  background-color: #0056b3;
+}
+
+.result-box {
+  margin-top: 20px;
+}
+
+iframe {
+  height: 350px;
+}
+
+.hint-row {
+  padding: 10px;
+  margin-bottom: 5px;
+  background: #eee;
+  border-left: 5px solid #ffa500;
+  word-break: break-word;
+}
+
+.hint-row span {
+  font-weight: bold;
+}
+
+.match {
+  color: green;
+}
+
+.up {
+  color: blue;
+}
+
+.down {
+  color: red;
+}
+
+.log-box {
+  margin-top: 30px;
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.log-box h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#log-list {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#log-list li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  background: #fff;
+  border-left: 4px solid #007bff;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.final-box {
+  background: #ffdddd;
+  border: 3px solid #ff4e50;
+  padding: 30px;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #990000;
+  margin-top: 30px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  animation: fadeinPop 0.5s ease-in-out;
+}
+
+@keyframes fadeinPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
