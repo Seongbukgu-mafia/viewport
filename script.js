@@ -233,7 +233,11 @@ const players = [
       logList.appendChild(logItem);
   
       if (player.name === answer.name) {
-        container.innerHTML = `<p class="hint-row match">🎉 정답입니다! ${answer.name}!</p>`;
+        const successWrap = document.createElement("div");
+        successWrap.className = "success-box";
+        successWrap.innerHTML = `<p>🎯 정답입니다! <strong>${answer.name}</strong>!</p>`;
+        resultBox.appendChild(successWrap);
+  
         const iframe = document.createElement("iframe");
         iframe.width = "100%";
         iframe.height = "350";
@@ -241,8 +245,8 @@ const players = [
         iframe.frameBorder = "0";
         iframe.allow = "autoplay; encrypted-media";
         iframe.allowFullscreen = true;
-        container.appendChild(iframe);
-        resultBox.appendChild(container);
+        resultBox.appendChild(iframe);
+  
         input.disabled = true;
         button.disabled = true;
         resetBtn.style.display = 'block';
@@ -266,6 +270,7 @@ const players = [
         input.disabled = true;
         button.disabled = true;
         resetBtn.style.display = 'block';
+  
         const finalWrap = document.createElement("div");
         finalWrap.className = "final-box";
         finalWrap.innerHTML = `
