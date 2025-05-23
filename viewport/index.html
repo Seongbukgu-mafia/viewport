@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Who’s Fox?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="start-screen">
+    <div class="start-wrap">
+      <h1>🦊 Who’s Fox?</h1>
+      <p class="help-text" style="color: white; margin-top: 10px; font-size: 14px;">
+        레스터 시티 선수를 맞히는 <strong>스무고개 퀴즈 게임</strong>입니다!<br>
+        선수의 <strong>이름을 풀네임</strong>으로 입력해 정답을 맞혀보세요.<br><br>
+        예: <strong>제이미 바디</strong><br>
+        정답 확인은 <strong>엔터키</strong> 또는 <strong>정답 버튼</strong>으로 할 수 있어요! 🎯
+      </p>
+      <button id="start-button">🎮 게임 시작</button>
+    </div>
+  </div>
+
+  <div class="main-game" style="display: none;">
+    <div class="sidebar">
+      <h2>📋 선수 목록 (20명)</h2>
+      <ul class="player-list">
+        <li>제이미 바디</li>
+        <li>팻슨 다카</li>
+        <li>조르당 아이유</li>
+        <li>압둘 파타우 이사하쿠</li>
+        <li>마비디디</li>
+        <li>케이시 맥아티어</li>
+        <li>해리 윙크스</li>
+        <li>윌프레드 은디디</li>
+        <li>부바카리 수마레</li>
+        <li>빌랄 엘 카누스</li>
+        <li>올리버 스킵</li>
+        <li>제임스 저스틴</li>
+        <li>리카르도 페레이라</li>
+        <li>코너 코디</li>
+        <li>빅토르 크리스티안센</li>
+        <li>루크 토마스</li>
+        <li>바우트 파스</li>
+        <li>야닉 베스터고르</li>
+        <li>마스 헤르만센</li>
+        <li>야쿠프 스톨라르치크</li>
+      </ul>
+      <img src="logo.png" alt="레스터 시티 로고" style="margin-top: 20px; width: 100%; max-width: 180px; height: auto; object-fit: contain; display: block; margin-left: auto; margin-right: auto;" />
+    </div>
+
+    <div class="game-container">
+      <div class="content-box">
+        <h1>🦊 Who’s Fox?</h1>
+
+        <p class="help-text">
+          ✅ 선수 <strong>풀네임</strong>을 입력하세요 (예: 제이미 바디)<br>
+          - <strong>엔터키</strong> 또는 <strong>정답 버튼</strong>으로 확인 가능<br>
+          - <span class="match">일치</span>, <span class="up">Up</span>, <span class="down">Down</span> 힌트를 참고하세요!<br>
+          ⚠️ <strong>4번 안에</strong> 맞춰야 게임 성공입니다 ⚠️
+        </p>
+
+        <div class="input-wrap">
+          <input type="text" id="guess-input" placeholder="선수 풀네임을 입력하세요" />
+          <button id="submit-button">⚽⚽⚽ 정답 ⚽⚽⚽</button>
+          <button id="reset-button" style="display:none;">🔁 다시하기</button>
+        </div>
+
+        <div class="result-box" id="result-box"></div>
+
+        <div class="log-box">
+          <h3>📘 시도 기록</h3>
+          <ul id="log-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
